@@ -9,6 +9,11 @@ public class Character
     public Weapon weapon;
     public Buff buff;
 
+    public Character()
+    {
+
+    }
+
     public int Attack()
     {
         int attack = strength;

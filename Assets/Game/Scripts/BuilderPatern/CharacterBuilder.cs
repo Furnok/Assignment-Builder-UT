@@ -5,65 +5,52 @@ public static class A
 
 public class CharacterBuilder
 {
-    private string name;
-    private int health;
-    private int strength;
-    private int intelligence;
-    private Weapon weapon;
-    private Buff buff;
+    private Character character = new Character();
 
     public CharacterBuilder WithName(string name)
     {
-        this.name = name;
+        character.name = name;
 
         return this;
     }
 
     public CharacterBuilder WithHealth(int health)
     {
-        this.health = health;
+        character.health = health;
 
         return this;
     }
 
     public CharacterBuilder WithStrength(int strength)
     {
-        this.strength = strength;
+        character.strength = strength;
 
         return this;
     }
 
     public CharacterBuilder WithIntelligence(int intelligence)
     {
-        this.intelligence = intelligence;
+        character.intelligence = intelligence;
 
         return this;
     }
 
     public CharacterBuilder WithWeapon(Weapon weapon)
     {
-        this.weapon = weapon;
+        character.weapon = weapon;
 
         return this;
     }
 
     public CharacterBuilder WithBuff(Buff buff)
     {
-        this.buff = buff;
+        character.buff = buff;
 
         return this;
     }
 
     public Character Build()
     {
-        Character character = new Character();
-        character.name = name;
-        character.health = health;
-        character.strength = strength;
-        character.intelligence = intelligence;
-        character.weapon = weapon;
-        character.buff = buff;
-
         return character;
     }
 

@@ -60,8 +60,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Weapon weapon = new Weapon();
-        weapon.name = "Sword";
+        Weapon weapon = new Weapon("Sword", 0);
 
         // Act
         character = A.Character.WithWeapon(weapon);
@@ -76,8 +75,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Weapon weapon = new Weapon();
-        weapon.strength = 4;
+        Weapon weapon = new Weapon("", 4);
 
         // Act
         character = A.Character.WithWeapon(weapon);
@@ -93,9 +91,7 @@ public class DirectionTests
         Character character = new Character();
         character.strength = 10;
 
-        Weapon weapon = new Weapon();
-        weapon.strength = 4;
-
+        Weapon weapon = new Weapon("", 4);
         character.weapon = weapon;
 
         // Act
@@ -125,8 +121,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Buff buff = new Buff();
-        buff.strength = 2;
+        Buff buff = new Buff(2, 0);
 
         // Act
         character = A.Character.WithBuff(buff);
@@ -141,8 +136,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Buff buff = new Buff();
-        buff.remainingRounds = 2;
+        Buff buff = new Buff(0, 2);
 
         // Act
         character = A.Character.WithBuff(buff);
@@ -158,10 +152,7 @@ public class DirectionTests
         Character character = new Character();
         character.strength = 10;
 
-        Buff buff = new Buff();
-        buff.strength = 2;
-        buff.remainingRounds = 2;
-
+        Buff buff = new Buff(2, 0);
         character.buff = buff;
 
         // Act
@@ -178,15 +169,10 @@ public class DirectionTests
         Character character = new Character();
         character.strength = 10;
 
-        Weapon weapon = new Weapon();
-        weapon.strength = 4;
-
+        Weapon weapon = new Weapon("", 4);
         character.weapon = weapon;
 
-        Buff buff = new Buff();
-        buff.strength = 2;
-        buff.remainingRounds = 2;
-
+        Buff buff = new Buff(2, 0);
         character.buff = buff;
 
         // Act
@@ -202,9 +188,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Buff buff = new Buff();
-        buff.remainingRounds = 2;
-
+        Buff buff = new Buff(0, 2);
         character.buff = buff;
 
         // Act
@@ -220,9 +204,7 @@ public class DirectionTests
         // Arrange
         Character character = new Character();
 
-        Buff buff = new Buff();
-        buff.remainingRounds = 1;
-
+        Buff buff = new Buff(0, 1);
         character.buff = buff;
 
         // Act
